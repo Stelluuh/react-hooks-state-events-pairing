@@ -3,11 +3,14 @@ import CommentCard from './CommentCard'
 
 function CommentsContainer({ comments }) {
 
-    const renderComments = comments.map(comment => <CommentCard key={comment.id} comment={comment}/>)
+    const renderComments = comments.map(comment => <CommentCard key={comment.id} userComment={comment}/>)
 
     return(
         <div>
-            <h2>Comment Container!</h2>
+            <br/>
+            <button>Hide Comments</button>
+            <hr/>
+            {/* <h2>Comment Container!</h2> */}
             {renderComments}
         </div>
     )
