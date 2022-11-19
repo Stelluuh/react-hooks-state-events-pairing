@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function VideoContainer({video}) {
     // console.log('from video container: ', video)
-    const {title, views, createdAt, upvotes, downvotes, embedUrl} = video
+    const [likes, setLikes] = useState(video.upvotes)
+    const [dislikes, setDislikes] = useState(video.downvotes)
+    
+    const {title, views, createdAt, embedUrl} = video
+
     return(
         <div>
             <iframe
@@ -15,8 +19,8 @@ function VideoContainer({video}) {
             />
             <h1>{title}</h1>
             <p>{`${views} Views | Uploaded ${createdAt}`}</p>
-            <button>{`${upvotes} 👍`}</button>
-            <button>{`${downvotes} 👎`}</button>
+            <button onClick={() => setLikes(likes + 1)}>{`${likes} 👍`} </button>
+            <button onClick={() => setDislikes(dislikes + 1)}>{`${dislikes} 👎`} </button>
         </div>
     )
 }

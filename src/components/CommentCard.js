@@ -4,7 +4,7 @@ import React from 'react';
 function CommentCard({ userComment }) {
     const { user, comment } = userComment
 
-    console.log({userComment})
+    // console.log({userComment})
 
     return(
         <div>

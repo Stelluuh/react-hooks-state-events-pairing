@@ -4,11 +4,10 @@ import VideoContainer from './VideoContainer'
 import CommentsContainer from './CommentsContainer.js';
 
 function App() {
-  
 
   return (
     <div className="App">
-      <VideoContainer video={video}/>
+      <VideoContainer video={video} />
       <CommentsContainer comments={video.comments}/>
     </div>
   );
