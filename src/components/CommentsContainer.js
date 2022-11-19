@@ -3,7 +3,7 @@ import CommentCard from './CommentCard'
 
 function CommentsContainer() {
     return(
-        <div style={{border: "1px, solid, blue"}}>
+        <div>
             <h2>Comment Container!</h2>
             <CommentCard />
         </div>
