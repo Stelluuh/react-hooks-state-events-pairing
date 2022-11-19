@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <VideoContainer video={video}/>
-      <CommentsContainer />
+      <CommentsContainer comments={video.comments}/>
     </div>
   );
 }
