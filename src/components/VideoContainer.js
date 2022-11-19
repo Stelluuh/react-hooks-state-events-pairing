@@ -1,7 +1,7 @@
 import React from 'react';
 
 function VideoContainer({video}) {
-    console.log('from video container: ', video)
+    // console.log('from video container: ', video)
     const {title, views, createdAt, upvotes, downvotes, embedUrl} = video
     return(
         <div>
